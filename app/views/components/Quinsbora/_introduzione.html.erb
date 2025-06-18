@@ -27,20 +27,22 @@
             <p class="text-sm md:text-base"><%= introduzionesubtitle2 %></p>
         </div>
 
-        <!-- Cards -->
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <% cards.each do |card| %>
-                <div class="bg-opacity-80 rounded-lg overflow-hidden shadow-lg">
-                    <img
-                        src=<%= card[:image] %>
-                        alt="Card Title"
-                        class="w-full h-[300px] md:h-[500px] object-cover"
-                    />
-                    <div class="p-4 md:p-6">
-                        <h4 class="text-lg md:text-2xl font-semibold"><%= card[:description] %></h4>
-                    </div>
+        <% cards.each do |card| %>
+            <a href="<%= card[:link] %>" class="block hover:scale-105 transition-transform duration-300">
+            <div class="bg-opacity-80 rounded-lg overflow-hidden shadow-lg">
+                <img
+                src="<%= card[:image] %>"
+                alt="Card Title"
+                class="w-full h-[300px] md:h-[500px] object-cover"
+                />
+                <div class="p-4 md:p-6">
+                <h4 class="text-lg md:text-2xl font-semibold"><%= card[:description] %></h4>
                 </div>
-            <% end %>
+            </div>
+            </a>
+        <% end %>
         </div>
     </div>
 </section>

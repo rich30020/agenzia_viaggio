@@ -17,22 +17,22 @@
   <%# ---------------------------------------- %>
   <%# INTRODUZIONE - Presentazione generale tour %>
   <%# ---------------------------------------- %>
-  <%= render partial: 'components/Quinsbora/introduzione', locals: {
-    introduzioneimage: '/images/quellenhof/bg-section3.jpg',
-    introduzionetext: 'Un viaggio indimenticabile tra cultura, natura e tradizioni mediterranee.',
-    introduzionetitle: 'Barcellona, Parigi, Berlino, Saranda e Creta',
-    introduzionesubtitle: '10 giorni, 5 nazioni, 5 destinazioni',
-    introduzionesubtitle2: 'Un mix perfetto di arte, storia, mare e gastronomia.',
-    introduzionesubtitle3: 'Ideale per chi cerca avventura e relax in un unico viaggio.',
-    cards: [
-      { image: '/images/quellenhof/card1a.jpg', description: 'Barcellona' },
-      { image: '/images/quellenhof/card2a.jpg', description: 'Parigi' },
-      { image: '/images/quellenhof/card3.jpg', description: 'Berlino' },
-      { image: '/images/quellenhof/card4.jpg', description: 'Saranda' },
-      { image: '/images/quellenhof/card5.jpg', description: 'Creta' },
+<%= render partial: 'components/Quinsbora/introduzione', locals: {
+  introduzioneimage: '/images/quellenhof/bg-section3.jpg',
+  introduzionetext: 'Un viaggio indimenticabile tra cultura, natura e tradizioni mediterranee.',
+  introduzionetitle: 'Barcellona, Parigi, Berlino, Saranda e Creta',
+  introduzionesubtitle: '10 giorni, 5 nazioni, 5 destinazioni',
+  introduzionesubtitle2: 'Un mix perfetto di arte, storia, mare e gastronomia.',
+  introduzionesubtitle3: 'Ideale per chi cerca avventura e relax in un unico viaggio.',
+  cards: [
+    { image: '/images/quellenhof/card1a.jpg', description: 'Barcellona', link: '/spagna' },
+    { image: '/images/quellenhof/card2a.jpg', description: 'Parigi', link: '/francia' },
+    { image: '/images/quellenhof/card3.jpg', description: 'Berlino', link: '/germania' },
+    { image: '/images/quellenhof/card4.jpg', description: 'Saranda', link: '/albania' },
+    { image: '/images/quellenhof/card5.jpg', description: 'Creta', link: '/grecia' }
+  ]
+} %>
 
-    ]
-  } %>
 
   <%# ------------------------------------------------------------ %>
   <%# PACCHETTI - Descrizione dettagliata giorno per giorno %>
@@ -90,35 +90,7 @@
       }
     ]
   } %>
-
-  <%# ------------------------------------------------- %>
-  <%# TEXTCARD - Focus esperienze culinarie locali %>
-  <%# ------------------------------------------------- %>
-  <%= render partial: 'components/Quinsbora/textcard', locals: {
-    textcard: [
-      {
-        image: '/images/quellenhof/piatto1.png',
-        title: 'Sapori mediterranei',
-        description: 'Dalle tapas spagnole ai piatti francesi, fino ai sapori greci e balcanici: un viaggio per il palato.',
-        scopri: 'Scopri i piatti tipici'
-      },
-      {
-        image: '/images/quellenhof/piatto2.png',
-        title: 'Esperienze enogastronomiche',
-        description: 'Degustazioni di vini, oli e prodotti tipici accompagnati da guide esperte.',
-        scopri: 'Esplora sapori autentici'
-      }
-    ]
-  } %>
-
-  <%# ---------------------------------------------- %>
-  <%# CARDTESTO - Suggerimenti per gli alloggi %>
-  <%# ---------------------------------------------- %>
-  <%= render partial: 'components/Quinsbora/cardtesto', locals: {
-    testotitle: 'Alloggi selezionati',
-    testosubtitle: 'Strutture confortevoli e centrali per un soggiorno senza pensieri.',
-    panoramica: 'Visualizza tutte le opzioni di alloggio'
-  } %>
+  <hr>
 
   <%# ---------------------------------------------- %>
   <%# NEWS - Aggiornamenti e info utili per i viaggiatori %>

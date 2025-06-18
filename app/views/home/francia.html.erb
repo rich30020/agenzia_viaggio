@@ -1,0 +1,110 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# HERO dedicato a Parigi %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/paris.jpg',
+    herotext: 'Itinerario Parigi',
+    herotitle: '3 giorni nella Ville Lumière',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Programma',
+    heronavbar2: 'Cosa vedere',
+    heronavbar3: 'Info utili',
+    heronavbar4: 'Prenota'
+  } %>
+
+  <%# INTRODUZIONE Parigi %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/parigi.jpg',
+    introduzionetext: 'Romanticismo, cultura e arte nel cuore della Francia.',
+    introduzionetitle: 'Parigi',
+    introduzionesubtitle: '3 giorni nella capitale francese',
+    introduzionesubtitle2: 'Monumenti iconici e atmosfere bohemien',
+    introduzionesubtitle3: 'Dalla Torre Eiffel a Montmartre',
+    cards: [
+      { image: '/images/quellenhof/eiffel.jpg', description: 'Torre Eiffel' },
+      { image: '/images/quellenhof/louvre.jpg', description: 'Museo del Louvre' },
+      { image: '/images/quellenhof/montmatre.jpg', description: 'Montmartre' }
+    ]
+  } %>
+
+  <%# PROGRAMMA DETTAGLIATO %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/parigi-day.jpg',
+    pacchettititle: 'Programma giorno per giorno',
+    pacchettisubtitle: 'Scopri cosa fare a Parigi, ora per ora.',
+    pacchettiofferte: 'Visualizza mappa attività',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/eiffel.jpg',
+        title: 'Giorno 1 – Arrivo e Torre Eiffel',
+        subtitle: 'Benvenuti a Parigi!',
+        description: "Arrivo all'aeroporto CDG, trasferimento e prima visita alla Torre Eiffel.",
+        periods: 'Orari: 14:00 - 21:00',
+        details: "14:00 – Arrivo a CDG\n14:30 – Taxi verso l’AirB&B (costo 40-50€)\n15:00 – Check-in e relax\n16:30 – Visita Torre Eiffel (secondo piano e cima: 27,50€)\n18:30 – Vista dal Trocadéro\n19:30 – Cena tradizionale vicino alla Torre o a Montmartre",
+        servizi: ['Trasferimento in taxi', 'Ingresso Torre Eiffel', 'Cena tipica suggerita']
+      },
+      {
+        image: '/images/quellenhof/louvre.jpg',
+        title: 'Giorno 2 – Cultura e storia',
+        subtitle: 'Musei, giardini e passeggiate lungo la Senna',
+        description: 'Un’immersione nella storia tra Louvre, Marais e Notre-Dame.',
+        periods: 'Orari: 08:00 - 21:00',
+        details: "08:00 – Colazione\n09:00 – Visita al Louvre (ingresso: 39,90€)\n12:30 – Passeggiata nei Giardini delle Tuileries\n13:00 – Pranzo a Le Marais\n15:00 – Visita a Notre-Dame\n16:30 – Passeggiata lungo la Senna\n17:30 – Visita Sainte-Chapelle\n19:30 – Cena tipica (es. Café de Flore)",
+        servizi: ['Biglietto Louvre', 'Guida digitale Marais', 'Cena consigliata']
+      },
+      {
+        image: '/images/quellenhof/montmatre.jpg',
+        title: 'Giorno 3 – Montmartre e partenza',
+        subtitle: 'Atmosfera bohemien e ritorno',
+        description: 'Scopri Montmartre prima del volo per Berlino.',
+        periods: 'Orari: 08:00 - 14:00',
+        details: "08:00 – Colazione\n09:00 – Visita Montmartre e Basilica Sacré-Cœur\n11:00 – Passeggiata a Place du Tertre\n12:30 – Pranzo tipico\n14:00 – Ritorno in AirB&B e trasferimento in aeroporto\nVolo per Berlino (50-100€)",
+        servizi: ['Tour Montmartre', 'Trasferimento incluso', 'Assistenza partenza']
+      }
+    ]
+  } %>
+
+  <%# APPROFONDIMENTO CABARET PARIGINO %>
+  <%= render partial: 'components/Quinsbora/approfondimento', locals: {
+    approfondimentotitle: 'Il fascino del cabaret parigino',
+    approfondimentotext: "Il viaggio inizia a Montmartre, tra artisti di strada, la Basilica del Sacré-Cœur e l’iconico Moulin Rouge. Vivi l’atmosfera bohémien e goditi uno spettacolo con il famoso can-can.\nIl giorno dopo, visita luoghi simbolo del cabaret come il Folies Bergère, l’Opéra Garnier e Le Lido. Scopri le origini del cabaret al Museo dedicato, poi visita caffè storici e il Lapin Agile, frequentato da Picasso.\nUn tour guidato ti porterà nei cabaret storici come il Moulin de la Galette e Le Chat Noir, culla della cultura artistica parigina.\n\nEsplora il cabaret contemporaneo con spettacoli innovativi al Crazy Horse e una nuova serata al Moulin Rouge. Prenota i biglietti in anticipo (87–250€) e indossa abiti eleganti. Usa trasporti pubblici con il Navigo Pass (7,50€/giorno) per muoverti comodamente in città.",
+    approfondimentoimage: '/images/quellenhof/molin.jpg'
+  } %>
+
+  <%# FEATURE / PUNTI DI FORZA %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/feature1.png',
+        title: 'Guida in italiano',
+        text: 'Scopri Parigi con accompagnatori esperti bilingue.'
+      },
+      {
+        image: '/images/quellenhof/feature2.webp',
+        title: 'Collegamenti efficienti',
+        text: 'Navigo Pass incluso per spostarsi facilmente.'
+      },
+      {
+        image: '/images/quellenhof/feature3.png',
+        title: 'Arte e charme',
+        text: 'Vivi l’eleganza e l’arte di Parigi ogni giorno.'
+      }
+    ]
+  } %>
+
+  <%# CONTATTO / NEWSLETTER %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Vuoi personalizzare il tuo soggiorno a Parigi? Scrivici!',
+    newsletterbutton: 'Contattaci ora'
+  } %>
+
+  <%# FOOTER %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it'],
+    servizi: ['City Tour', 'Tour dei cabaret', 'Supporto 24/7'],
+    informazioni: ['Privacy', 'Condizioni di viaggio', 'FAQ'],
+    recensioni: ['★★★★★', 'Clienti soddisfatti dal 2003']
+  } %>
+
+</div>

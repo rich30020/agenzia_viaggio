@@ -1,0 +1,119 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# HERO dedicato a Saranda %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/sparanda.jpg',
+    herotext: 'Itinerario Saranda',
+    herotitle: '4 giorni nel sud dell’Albania',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Programma',
+    heronavbar2: 'Spiagge e Natura',
+    heronavbar3: 'Info utili',
+    heronavbar4: 'Prenota'
+  } %>
+
+  <%# INTRODUZIONE Saranda %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/surunda.jpg',
+    introduzionetext: 'Un angolo nascosto d’Europa tra acque cristalline e storia millenaria.',
+    introduzionetitle: 'Saranda',
+    introduzionesubtitle: '4 giorni tra mare, natura e tradizioni',
+    introduzionesubtitle2: 'Spiagge caraibiche e rovine antiche',
+    introduzionesubtitle3: 'Un viaggio autentico sulla costa ionica',
+    cards: [
+      { image: '/images/quellenhof/treisole.jpg', description: 'Ksamil e le Tre Isole' },
+      { image: '/images/quellenhof/occhioblu.jpg', description: 'Syri Kalter (Occhio Blu)' },
+      { image: '/images/quellenhof/stupendo.jpg', description: 'Spiaggia di Pulëbardha' }
+    ]
+  } %>
+
+  <%# PROGRAMMA DETTAGLIATO %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/sab.jpg',
+    pacchettititle: 'Programma giorno per giorno',
+    pacchettisubtitle: 'Relax, esplorazione e cucina mediterranea.',
+    pacchettiofferte: 'Guarda itinerario completo',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/promenade.jpg',
+        title: 'Giorno 1 – Arrivo e lungomare',
+        subtitle: 'Benvenuti a Saranda!',
+        description: 'Dopo l’atterraggio a Tirana, trasferimento e serata sul lungomare.',
+        periods: 'Orari: 13:00 - 21:00',
+        details: "13:00 – Arrivo a Tirana\n14:00 – Partenza per Saranda (auto o transfer, durata 4h)\n18:00 – Check-in appartamento\n19:30 – Passeggiata sulla Promenade\n20:30 – Cena a base di pesce a La Petite",
+        servizi: ['Trasferimento incluso', 'Alloggio fronte mare', 'Cena tipica']
+      },
+      {
+        image: '/images/quellenhof/treisole.jpg',
+        title: 'Giorno 2 – Cultura e mare',
+        subtitle: 'Tour tra storia e relax in spiaggia',
+        description: 'Mattina culturale, pranzo tipico e pomeriggio a Ksamil.',
+        periods: 'Orari: 08:00 - 21:00',
+        details: "08:00 – Colazione\n09:00 – Tour guidato di Saranda\n12:30 – Pranzo vista mare\n14:00 – Relax e mare a Ksamil\n19:30 – Cena al rientro sul lungomare",
+        servizi: ['Tour storico', 'Transfer per Ksamil', 'Cena locale']
+      },
+      {
+        image: '/images/quellenhof/lekures.jpg',
+        title: 'Giorno 3 – Escursione in barca',
+        subtitle: 'Giornata avventura e panorami mozzafiato',
+        description: 'Snorkeling, relitti e visita al Castello di Lëkurësi.',
+        periods: 'Orari: 09:00 - 22:00',
+        details: "09:00 – Colazione\n10:00 – Escursione in barca con snorkeling\n13:00 – Pranzo a bordo o sul porto\n15:00 – Visita al Castello di Lëkurësi\n20:00 – Cena finale panoramica",
+        servizi: ['Barca con guida', 'Attrezzatura snorkeling', 'Cena tradizionale']
+      },
+      {
+        image: '/images/quellenhof/sand.jpg',
+        title: 'Giorno 4 – Partenza',
+        subtitle: 'Ultimi saluti e rientro',
+        description: 'Check-out e ritorno all’aeroporto di Tirana.',
+        periods: 'Orari: 08:00 - 14:00',
+        details: "08:00 – Colazione\n09:00 – Check-out\n09:30 – Transfer verso Tirana (4h)\n13:30 – Arrivo in aeroporto e volo di rientro",
+        servizi: ['Colazione inclusa', 'Trasferimento garantito', 'Assistenza viaggio']
+      }
+    ]
+  } %>
+
+  <%# APPROFONDIMENTO: Natura e Spiagge %>
+  <%= render partial: 'components/Quinsbora/approfondimento', locals: {
+    approfondimentotitle: 'Natura incontaminata e spiagge da sogno',
+    approfondimentotext: "La costa di Saranda è un paradiso mediterraneo: tra le più celebri troviamo Pulëbardha, con i suoi ciottoli bianchi e le acque trasparenti, perfetta per un pomeriggio di relax.\nKsamil incanta con le sue Tre Isole collegate da una lingua di sabbia: un angolo tropicale nel cuore d’Europa.\nA pochi chilometri si trova Syri Kalter, l’Occhio Blu: una sorgente misteriosa dove l’acqua sgorga limpida da una profondità ancora sconosciuta, creando sfumature blu intenso spettacolari.\n\nTra un tuffo e un’escursione, ti attendono panorami mozzafiato e sapori autentici: l’Albania ti sorprenderà per bellezza e accoglienza.",
+    approfondimentoimage: '/images/quellenhof/sand.jpg'
+  } %>
+
+  <%# FEATURE / PUNTI DI FORZA %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/feature1.png',
+        title: 'Paesaggi mozzafiato',
+        text: 'Da montagne verdi a spiagge caraibiche, tutto a portata di mano.'
+      },
+      {
+        image: '/images/quellenhof/feature2.webp',
+        title: 'Esperienze autentiche',
+        text: 'Vivi l’Albania vera tra cultura e ospitalità.'
+      },
+      {
+        image: '/images/quellenhof/feature3.png',
+        title: 'Relax e avventura',
+        text: 'Perfetto mix tra giornate di mare ed escursioni.'
+      }
+    ]
+  } %>
+
+  <%# CONTATTO / NEWSLETTER %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Vuoi organizzare il tuo viaggio a Saranda? Contattaci!',
+    newsletterbutton: 'Scrivici ora'
+  } %>
+
+  <%# FOOTER %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it'],
+    servizi: ['Escursioni in barca', 'Tour culturali', 'Assistenza 24/7'],
+    informazioni: ['Privacy', 'Condizioni di viaggio', 'FAQ'],
+    recensioni: ['★★★★★', 'Clienti soddisfatti dal 2003']
+  } %>
+
+</div>

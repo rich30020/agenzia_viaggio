@@ -1,0 +1,112 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# HERO dedicato a Barcellona %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/card1a.jpg',
+    herotext: 'Itinerario Barcellona',
+    herotitle: '3 giorni alla scoperta della capitale catalana',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Programma',
+    heronavbar2: 'Cosa vedere',
+    heronavbar3: 'Info utili',
+    heronavbar4: 'Prenota'
+  } %>
+
+  <%# INTRODUZIONE Barcellona %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/bg-section3.jpg',
+    introduzionetext: 'Un tour tra arte, cultura, buon cibo e quartieri iconici.',
+    introduzionetitle: 'Barcellona',
+    introduzionesubtitle: '3 notti nel cuore della Catalogna',
+    introduzionesubtitle2: 'Architettura, gastronomia e vita mediterranea',
+    introduzionesubtitle3: 'Dalla Sagrada Familia al Barrio Gótico',
+    cards: [
+      { image: '/images/quellenhof/sagrada.jpg', description: 'Sagrada Familia' },
+      { image: '/images/quellenhof/gracia.jpg', description: 'Quartiere Gràcia' },
+      { image: '/images/quellenhof/guell.jpg', description: 'Parco Güell' }
+    ]
+  } %>
+
+  <%# PROGRAMMA DETTAGLIATO %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/burca.jpg',
+    pacchettititle: 'Programma giorno per giorno',
+    pacchettisubtitle: 'Scopri cosa fare a Barcellona, ora per ora.',
+    pacchettiofferte: 'Visualizza mappa attività',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/gracia.jpg',
+        title: 'Giorno 1 – 15/03/2025',
+        subtitle: 'Arrivo e primo contatto con Barcellona',
+        description: 'Dall’aeroporto al tuo alloggio, poi un primo tuffo nella vibrante atmosfera del quartiere Gràcia.',
+        periods: 'Orari: 14:00 - 21:00',
+        details: "14:00 – Arrivo all'aeroporto El Prat\n14:30 – Trasporto verso zona Airbnb (Collblanc o Diagonal)\n15:30 – Check-in in zona Eixample o Gràcia\n17:00 – Passeggiata nel quartiere Gràcia tra piazze e caffè locali\n20:00 – Cena economica in zona (es. Taverna El Glop)",
+        servizi: ['Trasferimento incluso', 'Alloggio consigliato: Casa Gracia', 'Welcome kit digitale']
+      },
+      {
+        image: '/images/quellenhof/camp.jpg',
+        title: 'Giorno 2 – 16/03/2025',
+        subtitle: 'Capolavori di Gaudí e atmosfera urbana',
+        description: 'Visita alla Sagrada Familia, passeggiate nell’Eixample e una visita allo storico Camp Nou.',
+        periods: 'Orari: 08:00 - 21:00',
+        details: "08:00 – Colazione in caffè locale\n09:00 – Ingresso Sagrada Familia (26€, 1.5h)\n11:00 – Passeggiata su Passeig de Gràcia e Casa Batlló\n13:00 – Pranzo a 100 Montaditos o tapas bar\n14:30 – Visita al Camp Nou Museum (12€)\n16:30 – Shopping o relax a Plaza Catalunya\n20:00 – Cena libera (suggerita: Bodega Joan)",
+        servizi: ['Biglietto incluso Sagrada Familia', 'Museo Camp Nou', 'Shopping zone mappa']
+      },
+      {
+        image: '/images/quellenhof/rambla.jpg',
+        title: 'Giorno 3 – 17/03/2025',
+        subtitle: 'Scoperte locali tra Ramblas e Barri Gòtic',
+        description: 'Un viaggio tra mercato, quartieri storici e parchi con vista panoramica.',
+        periods: 'Orari: 08:00 - 21:30',
+        details: "08:00 – Colazione vicino Airbnb\n09:00 – Passeggiata su La Rambla e visita a Mercato Boqueria\n11:00 – Visita Parco Güell (7€, 1h)\n13:00 – Pranzo al mare (La Mar Salada o simili)\n15:00 – Visita al Barrio Gótico e alla Cattedrale\n19:00 – Relax all’alloggio\n21:00 – Cena finale a Cervecería Catalana",
+        servizi: ['Parco Güell incluso', 'Cena di gruppo opzionale', 'Guida digitale dei quartieri']
+      },
+      {
+        image: '/images/quellenhof/elprat.jpg',
+        title: 'Giorno 4 – 18/03/2025',
+        subtitle: 'Check-out e ritorno',
+        description: 'Ultima colazione, saluti e trasferimento in aeroporto.',
+        periods: 'Orari: 08:00 - 10:00',
+        details: "08:00 – Colazione leggera nel tuo alloggio\n09:00 – Trasporto verso l'aeroporto El Prat\n10:00 – Fine del tour di Barcellona",
+        servizi: ['Colazione inclusa', 'Trasferimento aeroporto', 'Assistenza bagagli']
+      }
+    ]
+  } %>
+
+  <%# FEATURE / PUNTI DI FORZA %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/feature1.png',
+        title: 'Supporto locale',
+        text: 'Contatto diretto con guide italiane in loco.'
+      },
+      {
+        image: '/images/quellenhof/feature2.webp',
+        title: 'Trasporti comodi',
+        text: 'Tutti i collegamenti pianificati per massima comodità.'
+      },
+      {
+        image: '/images/quellenhof/feature3.png',
+        title: 'Cultura e relax',
+        text: 'Il giusto mix tra attività e momenti di pausa.'
+      }
+    ]
+  } %>
+
+  <%# CONTATTO / NEWSLETTER %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Vuoi personalizzare il tuo soggiorno a Barcellona? Scrivici!',
+    newsletterbutton: 'Contattaci ora'
+  } %>
+
+  <%# FOOTER %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it'],
+    servizi: ['City Tour', 'Escursioni su misura', 'Supporto 24/7'],
+    informazioni: ['Privacy', 'Condizioni di viaggio', 'FAQ'],
+    recensioni: ['★★★★★', 'Clienti soddisfatti dal 2003']
+  } %>
+
+</div>

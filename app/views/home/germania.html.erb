@@ -1,0 +1,110 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# HERO dedicato a Berlino %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/ciesa.jpg',
+    herotext: 'Itinerario Berlino',
+    herotitle: '3 giorni nella capitale tedesca',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Programma',
+    heronavbar2: 'Cosa vedere',
+    heronavbar3: 'Info utili',
+    heronavbar4: 'Prenota'
+  } %>
+
+  <%# INTRODUZIONE Berlino %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/burlun.jpg',
+    introduzionetext: 'Storia, arte urbana e cultura underground.',
+    introduzionetitle: 'Berlino',
+    introduzionesubtitle: '3 giorni tra memoria e innovazione',
+    introduzionesubtitle2: 'Muri che parlano, club che vibrano',
+    introduzionesubtitle3: 'Dalla Porta di Brandeburgo al Sisyphos',
+    cards: [
+      { image: '/images/quellenhof/brandeburgo.jpg', description: 'Porta di Brandeburgo' },
+      { image: '/images/quellenhof/muro.jpeg', description: 'East Side Gallery' },
+      { image: '/images/quellenhof/Reichstag.jpg', description: 'Reichstag' }
+    ]
+  } %>
+
+  <%# PROGRAMMA DETTAGLIATO %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/berlin_day.jpg',
+    pacchettititle: 'Programma giorno per giorno',
+    pacchettisubtitle: 'Scopri Berlino, ora per ora.',
+    pacchettiofferte: 'Visualizza mappa attività',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/unter.jpg',
+        title: 'Giorno 1 – Arrivo e prime esplorazioni',
+        subtitle: 'Benvenuti a Berlino!',
+        description: 'Trasferimento verso Alexanderplatz e visita panoramica.',
+        periods: 'Orari: 14:00 - 22:00',
+        details: "14:00 – Arrivo a Berlino\n14:30 – Treno per Alexanderplatz (incluso con Welcome Card)\n15:00 – Check-in in Airbnb\n16:00 – Visita Torre della Televisione\n18:00 – Passeggiata su Unter den Linden\n19:30 – Cena tradizionale a Zur letzten Instanz",
+        servizi: ['Welcome Card inclusa', 'Ingresso Torre TV', 'Cena tipica consigliata']
+      },
+      {
+        image: '/images/quellenhof/muro.jpeg',
+        title: 'Giorno 2 – Cultura e vita urbana',
+        subtitle: 'Un mix tra memoria e modernità',
+        description: 'Musei, street food e quartieri alternativi.',
+        periods: 'Orari: 08:00 - 23:00',
+        details: "08:00 – Colazione\n09:00 – Memoriale per gli Ebrei e Reichstag (prenotazione gratuita)\n12:00 – Passeggiata nel Tiergarten\n13:30 – Pranzo veloce da Mustafa’s Kebab\n15:00 – East Side Gallery\n18:00 – Aperitivo a Kreuzberg\n20:00 – Cena + live music al Musik & Frieden",
+        servizi: ['Accesso memoriali e musei', 'Street food incluso', 'Concerto serale']
+      },
+      {
+        image: '/images/quellenhof/Reichstag.jpg',
+        title: 'Giorno 3 – Ultimi scorci e partenza',
+        subtitle: 'Arte e relax prima del volo',
+        description: 'Mattinata nei musei e trasferimento in aeroporto.',
+        periods: 'Orari: 08:00 - 14:00',
+        details: "08:00 – Colazione\n09:00 – Visita Isola dei Musei (inclusa con Welcome Card)\n11:30 – Passeggiata finale a Hackescher Markt\n13:00 – Rientro in appartamento e transfer\n14:00 – Partenza aeroporto",
+        servizi: ['Welcome Card musei', 'Supporto al trasferimento', 'Assistenza bagagli']
+      }
+    ]
+  } %>
+
+  <%# APPROFONDIMENTO VITA NOTTURNA E ARTE UNDERGROUND %>
+  <%= render partial: 'components/Quinsbora/approfondimento', locals: {
+    approfondimentotitle: 'Tra techno e street art: la Berlino alternativa',
+    approfondimentotext: "La notte berlinese pulsa nei club storici: il **Tresor**, simbolo della scena techno europea, ti aspetta con il suo sound industriale. Se preferisci l’aria aperta, **Sisyphos** offre un’esperienza unica in un’ex fabbrica trasformata in festival.\n\nDurante il giorno, esplora **Friedrichshain**, quartiere creativo con la **East Side Gallery** e murales d’autore. Il passato si fonde col presente tra bar alternativi e arte urbana.\n\nPrenota tour alternativi per scoprire il volto underground della città. Dai club ai caffè artistici, Berlino sorprende ad ogni angolo.",
+    approfondimentoimage: '/images/quellenhof/techno.jpg'
+  } %>
+
+  <%# FEATURE / PUNTI DI FORZA %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/feature_berlino1.png',
+        title: 'Welcome Card inclusa',
+        text: 'Trasporti e musei gratuiti con una sola carta.'
+      },
+      {
+        image: '/images/quellenhof/feature_berlino2.png',
+        title: 'Vita notturna unica',
+        text: 'Accesso privilegiato ai migliori club e concerti.'
+      },
+      {
+        image: '/images/quellenhof/feature_berlino3.png',
+        title: 'Street art e cultura',
+        text: 'Murales e gallerie all’aperto in ogni quartiere.'
+      }
+    ]
+  } %>
+
+  <%# CONTATTO / NEWSLETTER %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Vuoi personalizzare il tuo soggiorno a Berlino? Contattaci!',
+    newsletterbutton: 'Scrivici ora'
+  } %>
+
+  <%# FOOTER %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it'],
+    servizi: ['Tour alternativi', 'Ingresso club', 'Assistenza locale 24/7'],
+    informazioni: ['Privacy', 'Condizioni di viaggio', 'FAQ'],
+    recensioni: ['★★★★★', 'Oltre 500 esperienze guidate a Berlino']
+  } %>
+
+</div>
