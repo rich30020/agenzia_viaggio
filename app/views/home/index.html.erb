@@ -1,9 +1,10 @@
 <div class="w-full overflow-x-hidden">
-<div class="container mt-3">
   <% if user_signed_in? %>
+  <div class="welcome-message absolute top-32 left-4 z-20 text-white px-3 py-1 rounded">
     Benvenuto <%= current_user.email %>!
-  <% end %>
-</div>
+  </div>
+<% end %>
+
 
   <%= render partial: 'components/Quinsbora/hero', locals: {
     heroimage: '/images/quellenhof/hero3.jpg',
