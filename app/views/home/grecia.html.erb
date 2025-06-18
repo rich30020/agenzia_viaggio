@@ -1,0 +1,109 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# HERO dedicato a Creta %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/vaso.jpg',
+    herotext: 'Itinerario Creta',
+    herotitle: '4 giorni tra storia e mare a Creta',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Programma',
+    heronavbar2: 'Esperienze',
+    heronavbar3: 'Info utili',
+  } %>
+
+  <%# INTRODUZIONE Creta %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/torre.jpg',
+    introduzionetext: 'Un mix perfetto tra storia millenaria e acque cristalline.',
+    introduzionetitle: 'Creta',
+    introduzionesubtitle: '4 giorni tra cultura, spiagge e cucina greca',
+    introduzionesubtitle2: 'Dal Palazzo di Cnosso alle spiagge dorate',
+    introduzionesubtitle3: 'Un viaggio autentico nella più grande isola greca',
+    cards: [
+      { image: '/images/quellenhof/cnosso.jpg', description: 'Palazzo di Cnosso' },
+      { image: '/images/quellenhof/malia.jpg', description: 'Spiaggia di Malia' },
+      { image: '/images/quellenhof/koule.jpg', description: 'Fortezza Koules' }
+    ]
+  } %>
+
+  <%# PROGRAMMA DETTAGLIATO Creta %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/rich.jpg',
+    pacchettititle: 'Programma giorno per giorno',
+    pacchettisubtitle: 'Tra mare, storia antica e sapori cretesi.',
+    pacchettiofferte: 'Scopri il viaggio completo',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/cittta.jpg',
+        title: 'Giorno 1 – Arrivo e centro storico',
+        subtitle: 'Benvenuti a Creta!',
+        description: 'Check-in in centro e passeggiata nella capitale.',
+        periods: 'Orari: 14:00 - 22:00',
+        details: "14:00 – Arrivo all’aeroporto di Heraklion\n15:00 – Check-in Airbnb\n17:00 – Passeggiata nel centro storico\n20:00 – Cena tradizionale con moussaka e souvlaki",
+        servizi: ['Trasferimento facile', 'Alloggio centrale', 'Cena tipica greca']
+      },
+      {
+        image: '/images/quellenhof/cnosso.jpg',
+        title: 'Giorno 2 – Cnosso e Fortezza Koules',
+        subtitle: 'Immersione nella storia minoica',
+        description: 'Mattina al Palazzo di Cnosso, pomeriggio sul porto.',
+        periods: 'Orari: 08:00 - 21:00',
+        details: "08:00 – Colazione cretese\n09:00 – Visita al Palazzo di Cnosso\n13:00 – Pranzo tipico\n15:00 – Fortezza Koules sul mare\n20:00 – Cena panoramica a base di pesce",
+        servizi: ['Ingresso incluso', 'Guida storica', 'Cena vista mare']
+      },
+      {
+        image: '/images/quellenhof/playa.jpg',
+        title: 'Giorno 3 – Relax in spiaggia',
+        subtitle: 'Giornata tra sabbia dorata e mare turchese',
+        description: 'Puro relax nella rinomata Malia.',
+        periods: 'Orari: 10:00 - 20:00',
+        details: "10:00 – Partenza per Malia\n11:00 – Relax e bagni\n13:00 – Pranzo in spiaggia\n17:00 – Rientro e riposo\n20:00 – Cena tipica locale",
+        servizi: ['Trasporto incluso', 'Lettini e ombrellone', 'Cena in taverna']
+      },
+      {
+        image: '/images/quellenhof/cretad.jpg',
+        title: 'Giorno 4 – Rientro e imprevisti',
+        subtitle: 'Ultimi acquisti e gestione dello sciopero',
+        description: 'Mattina libera, poi rientro... se possibile!',
+        periods: 'Orari: 08:00 - 14:00',
+        details: "08:00 – Colazione\n09:00 – Shopping nel centro\n11:00 – Trasferimento verso aeroporto\n❗ Sciopero dei trasporti in corso: assistenza dedicata",
+        servizi: ['Supporto in loco', 'Check-out flessibile', 'Comunicazioni aggiornate']
+      }
+    ]
+  } %>
+
+  <%# APPROFONDIMENTO: Attività alternative %>
+  <%= render partial: 'components/Quinsbora/approfondimento', locals: {
+    approfondimentotitle: 'Esperienze alternative per tutta la famiglia',
+    approfondimentotext: "Se il tempo lo permette o in caso di variazioni di programma, puoi scoprire:\n\n• Il Cretaquarium con squali e tartarughe\n• Il Dinosauria Park per i più piccoli\n• Una passeggiata al tramonto sul lungomare\n• Gite in pedalò nei porti\n• Pasti economici in taverne locali a meno di 10€\n\nCreta sa adattarsi a ogni tipo di viaggiatore, anche in caso di imprevisti.",
+    approfondimentoimage: '/images/quellenhof/acquarium.jpg'
+  } %>
+
+  <%# FEATURE / PUNTI DI FORZA Creta %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/creta-feature1.jpg',
+        title: 'Cultura millenaria',
+        text: 'Dalle rovine minoiche ai musei archeologici.'
+      },
+      {
+        image: '/images/quellenhof/creta-feature2.jpg',
+        title: 'Mare e relax',
+        text: 'Spiagge dorate e acque limpide per ogni gusto.'
+      },
+      {
+        image: '/images/quellenhof/creta-feature3.jpg',
+        title: 'Flessibilità garantita',
+        text: 'Assistenza in caso di imprevisti e soluzioni rapide.'
+      }
+    ]
+  } %>
+
+  <%# CONTATTO / NEWSLETTER %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Vuoi partire per Creta? Scrivici ora!',
+    newsletterbutton: 'Contattaci subito'
+  } %>
+
+</div>
