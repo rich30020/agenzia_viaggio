@@ -1,88 +1,87 @@
-<footer class="bg-[#1c1c1c] text-white px-6 py-12">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
-        <!-- Indirizzo -->
-        <div>
-            <h3 class="text-lg font-semibold mb-2">Indirizzo</h3>
-            <p class="text-gray-400 leading-relaxed">
-                <% indirizzo.each do |value| %>
-                    <%= value %><br />
-                <% end %>
-            </p>
-        </div>
+<footer class="bg-gray-900 text-white px-6 py-12">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+    <section>
+      <h3 class="mb-2 text-lg font-semibold">Indirizzo</h3>
+      <address class="text-gray-400 leading-relaxed not-italic">
+        <% indirizzo.each do |line| %>
+          <%= line %><br />
+        <% end %>
+      </address>
+    </section>
 
-        <!-- Contatti -->
-        <div>
-            <h3 class="text-lg font-semibold mb-2">Contatti</h3>
-            <ul class="text-gray-400 space-y-1">
-                <% contatti.each do |value| %>
-                    <li><%= value %></a></li>
-                <% end %>
-            </ul>
-        </div>
+    <section>
+      <h3 class="mb-2 text-lg font-semibold">Contatti</h3>
+      <ul class="space-y-1 text-gray-400">
+        <% contatti.each do |contact| %>
+          <li><%= contact %></li>
+        <% end %>
+      </ul>
+    </section>
 
-        <!-- Service e novità -->
-        <div>
-            <h3 class="text-lg font-semibold mb-2">Service e novità</h3>
-            <ul class="text-gray-400 space-y-1">
-                <% servizi.each do |value| %>
-                    <li><a href="#" class="hover:underline"><%= value %></a></li>
-                <% end %>
-            </ul>
-        </div>
+    <section>
+      <h3 class="mb-2 text-lg font-semibold">Service e novità</h3>
+      <ul class="space-y-1 text-gray-400">
+        <% servizi.each do |service| %>
+          <li>
+            <a href="#" class="hover:underline"><%= service %></a>
+          </li>
+        <% end %>
+      </ul>
+    </section>
 
-        <!-- Informazioni -->
-        <div>
-            <h3 class="text-lg font-semibold mb-2">Informazioni</h3>
-            <ul class="text-gray-400 space-y-1">
-                <% informazioni.each do |value| %>
-                    <li><a href="#" class="hover:underline"><%= value %></a></li>
-                <% end %>
-            </ul>
-        </div>
+    <section>
+      <h3 class="mb-2 text-lg font-semibold">Informazioni</h3>
+      <ul class="space-y-1 text-gray-400">
+        <% informazioni.each do |info| %>
+          <li>
+            <a href="#" class="hover:underline"><%= info %></a>
+          </li>
+        <% end %>
+      </ul>
+    </section>
 
-        <!-- Recensioni -->
-        <div>
-            <h3 class="text-lg font-semibold mb-2">Recensioni</h3>
-            <% recensioni.each_with_index do |(value), index| %>
-                <% if index == 0 %>
-                    <div class="text-yellow-400 mb-1"><%= value %></div>
-                <% else %>
-                    <p class="text-gray-400 text-sm"><%= value %></p>
-                <% end %>
-            <% end %>
-        </div>
+
+    <section>
+      <h3 class="mb-2 text-lg font-semibold">Recensioni</h3>
+      <% recensioni.each_with_index do |review, idx| %>
+        <% if idx.zero? %>
+          <div class="mb-1 text-yellow-400"><%= review %></div>
+        <% else %>
+          <p class="text-sm text-gray-400"><%= review %></p>
+        <% end %>
+      <% end %>
+    </section>
+  </div>
+
+
+  <div class="max-w-7xl mx-auto mt-10 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-gray-700 pt-6 text-gray-400 text-sm">
+    <nav class="flex flex-wrap items-center gap-4">
+      <a href="#" class="flex items-center gap-1 hover:text-white"><span>📄</span> Brochure</a>
+      <a href="#" class="flex items-center gap-1 hover:text-white"><span>🎁</span> Buoni regalo</a>
+      <a href="#" class="flex items-center gap-1 hover:text-white"><span>🌀</span> Tour a 360°</a>
+      <a href="#" class="hover:text-white">📘</a>
+      <a href="#" class="hover:text-white">📸</a>
+      <a href="#" class="hover:text-white">📌</a>
+    </nav>
+
+    <div class="text-center md:text-right">
+      <p class="mb-1">© 2025 Rich Luxury Travel | PartIVA: IT0067910213</p>
+      <p class="space-x-3">
+        <a href="#" class="hover:underline">Note legali</a>
+        <a href="#" class="hover:underline">Privacy policy</a>
+        <a href="#" class="hover:underline">Mappa del sito</a>
+      </p>
     </div>
+  </div>
 
-    <!-- Icone e link -->
-    <div class="max-w-7xl mx-auto mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-400 text-sm">
-        <div class="flex flex-wrap items-center gap-4">
-            <a href="#" class="flex items-center gap-1 hover:text-white"><span>📄</span> Brochure</a>
-            <a href="#" class="flex items-center gap-1 hover:text-white"><span>🎁</span> Buoni regalo</a>
-            <a href="#" class="flex items-center gap-1 hover:text-white"><span>🌀</span> Tour a 360°</a>
-            <a href="#" class="hover:text-white">📘</a>
-            <a href="#" class="hover:text-white">📸</a>
-            <a href="#" class="hover:text-white">📌</a>
-        </div>
-
-        <div class="text-center md:text-right">
-            <p class="mb-1">© 2025 Rich Luxury Travel | PartIVA: IT0067910213</p>
-            <p class="space-x-3">
-                <a href="#" class="hover:underline">Note legali</a>
-                <a href="#" class="hover:underline">Privacy policy</a>
-                <a href="#" class="hover:underline">Mappa del sito</a>
-            </p>
-        </div>
+  <div class="mt-6 text-center text-gray-500 text-sm">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <span>Partner ▾</span>
+      <span>Riconoscimenti ▾</span>
+      <span>Pagine interessanti ▾</span>
+      <div class="mt-2 md:mt-0 flex items-center gap-1">
+        <span>created by Rich</span>
+      </div>
     </div>
-
-    <!-- Bottom bar -->
-    <div class="mt-6 text-center text-gray-500 text-sm">
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
-            <span>Partner ▾</span>
-            <span>Riconoscimenti ▾</span>
-            <span>Pagine interessanti ▾</span>
-            <div class="mt-2 md:mt-0 flex items-center gap-1">
-                <span>created by Rich</span>
-            </div>
-        </div>
-    </div>
+  </div>
 </footer>

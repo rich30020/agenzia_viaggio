@@ -1,6 +1,5 @@
 <div class="w-full overflow-x-hidden">
 
-  <%# HERO dedicato a Creta %>
   <%= render partial: 'components/Quinsbora/hero', locals: {
     heroimage: '/images/quellenhof/vaso.jpg',
     herotext: 'Itinerario Creta',
@@ -11,7 +10,6 @@
     heronavbar3: 'Info utili',
   } %>
 
-  <%# INTRODUZIONE Creta %>
   <%= render partial: 'components/Quinsbora/introduzione', locals: {
     introduzioneimage: '/images/quellenhof/torre.jpg',
     introduzionetext: 'Un mix perfetto tra storia millenaria e acque cristalline.',
@@ -26,7 +24,6 @@
     ]
   } %>
 
-  <%# PROGRAMMA DETTAGLIATO Creta %>
   <%= render partial: 'components/Quinsbora/pacchetti', locals: {
     pacchettiimage: '/images/quellenhof/rich.jpg',
     pacchettititle: 'Programma giorno per giorno',
@@ -72,14 +69,12 @@
     ]
   } %>
 
-  <%# APPROFONDIMENTO: Attività alternative %>
   <%= render partial: 'components/Quinsbora/approfondimento', locals: {
     approfondimentotitle: 'Esperienze alternative per tutta la famiglia',
     approfondimentotext: "Se il tempo lo permette o in caso di variazioni di programma, puoi scoprire:\n\n• Il Cretaquarium con squali e tartarughe\n• Il Dinosauria Park per i più piccoli\n• Una passeggiata al tramonto sul lungomare\n• Gite in pedalò nei porti\n• Pasti economici in taverne locali a meno di 10€\n\nCreta sa adattarsi a ogni tipo di viaggiatore, anche in caso di imprevisti.",
     approfondimentoimage: '/images/quellenhof/acquarium.jpg'
   } %>
 
-  <%# FEATURE / PUNTI DI FORZA Creta %>
   <%= render partial: 'components/Quinsbora/feature', locals: {
     cardsfeature: [
       {
@@ -100,7 +95,6 @@
     ]
   } %>
 
-  <%# CONTATTO / NEWSLETTER %>
   <%= render partial: 'components/Quinsbora/newsletter', locals: {
     newslettertitle: 'Vuoi partire per Creta? Scrivici ora!',
     newsletterbutton: 'Contattaci subito'

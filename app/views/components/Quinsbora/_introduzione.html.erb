@@ -1,48 +1,47 @@
 <section
-    class="relative bg-cover bg-center text-white py-12 px-6 md:px-24"
-    style="background-image: url(<%= introduzioneimage %>);"
+  class="relative bg-center bg-cover text-white py-12 px-6 md:px-24"
+  style="background-image: url(<%= introduzioneimage %>)"
 >
-    <!-- Overlay nero per scurire l'immagine -->
-    <div class="absolute inset-0 bg-[#222222] opacity-80"></div>
+  <div class="absolute inset-0 bg-[#222] opacity-80"></div>
 
-    <div class="relative z-10">
-        <!-- Top section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-            <div>
-                <p class="text-sm text-amber-100 mb-2 font-medium"><%= introduzionetext %></p>
-                <h2 class="text-3xl md:text-5xl font-medium leading-tight max-w-lg"><%= introduzionetitle %></h2>
-            </div>
-            <div>
-                <p class="text-sm md:text-md text-gray-300 font-medium"><%= introduzionesubtitle3 %></p>
-            </div>
-        </div>
-
-        <!-- Subtitle center -->
-        <div class="text-center mb-6">
-            <h3 class="text-xl md:text-2xl font-medium"><%= introduzionesubtitle %></h3>
-        </div>
-
-        <!-- Paragraph center -->
-        <div class="max-w-4xl mx-auto text-center text-gray-300 mb-12">
-            <p class="text-sm md:text-base"><%= introduzionesubtitle2 %></p>
-        </div>
-
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <% cards.each do |card| %>
-            <a href="<%= card[:link] %>" class="block hover:scale-105 transition-transform duration-300">
-            <div class="bg-opacity-80 rounded-lg overflow-hidden shadow-lg">
-                <img
-                src="<%= card[:image] %>"
-                alt="Card Title"
-                class="w-full h-[300px] md:h-[500px] object-cover"
-                />
-                <div class="p-4 md:p-6">
-                <h4 class="text-lg md:text-2xl font-semibold"><%= card[:description] %></h4>
-                </div>
-            </div>
-            </a>
-        <% end %>
-        </div>
+  <div class="relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+      <div>
+        <p class="mb-2 text-sm font-medium text-amber-100"><%= introduzionetext %></p>
+        <h2 class="max-w-lg text-3xl font-medium leading-tight md:text-5xl">
+          <%= introduzionetitle %>
+        </h2>
+      </div>
+      <div>
+        <p class="font-medium text-gray-300 text-sm md:text-base">
+          <%= introduzionesubtitle3 %>
+        </p>
+      </div>
     </div>
+
+    <div class="mb-6 text-center">
+      <h3 class="text-xl font-medium md:text-2xl"><%= introduzionesubtitle %></h3>
+    </div>
+
+    <div class="mx-auto mb-12 max-w-4xl text-center text-gray-300">
+      <p class="text-sm md:text-base"><%= introduzionesubtitle2 %></p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <% cards.each do |card| %>
+        <a href="<%= card[:link] %>" class="block transform transition-transform duration-300 hover:scale-105">
+          <div class="overflow-hidden rounded-lg bg-opacity-80 shadow-lg">
+            <img
+              src="<%= card[:image] %>"
+              alt="Card immagine"
+              class="h-[300px] w-full object-cover md:h-[500px]"
+            />
+            <div class="p-4 md:p-6">
+              <h4 class="text-lg font-semibold md:text-2xl"><%= card[:description] %></h4>
+            </div>
+          </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
 </section>

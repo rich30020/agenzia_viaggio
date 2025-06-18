@@ -1,44 +1,59 @@
-<section class="bg-[#1c1c1c] text-white px-6 py-20">
+<section class="bg-gray-900 text-white px-6 py-20">
   <div class="max-w-5xl mx-auto text-center">
     <h2 class="text-4xl md:text-5xl font-bold mb-4"><%= contattititle %></h2>
     <p class="text-gray-400 text-lg mb-12"><%= contattisubtitle %></p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left mb-16">
+    <div class="grid gap-10 grid-cols-1 md:grid-cols-3 text-left mb-16">
       <div>
-        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">📍 <span>Indirizzo</span></h3>
+        <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">📍 <span>Indirizzo</span></h3>
         <p class="text-gray-400 leading-relaxed text-base">
-          <% indirizzo.each do |value| %>
-            <%= value %><br />
+          <% indirizzo.each do |line| %>
+            <%= line %><br />
           <% end %>
         </p>
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">📞 <span>Contatti</span></h3>
-        <ul class="text-gray-400 space-y-1 text-base">
-          <% contatti.each do |value| %>
-            <li><%= value %></li>
+        <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">📞 <span>Contatti</span></h3>
+        <ul class="space-y-1 text-gray-400 text-base">
+          <% contatti.each do |contact| %>
+            <li><%= contact %></li>
           <% end %>
         </ul>
       </div>
 
       <div>
-        <h3 class="text-xl font-semibold mb-3 flex items-center gap-2">⏰ <span>Orari</span></h3>
-        <ul class="text-gray-400 space-y-1 text-base">
-          <% orari.each do |value| %>
-            <li><%= value %></li>
+        <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">⏰ <span>Orari</span></h3>
+        <ul class="space-y-1 text-gray-400 text-base">
+          <% orari.each do |time| %>
+            <li><%= time %></li>
           <% end %>
         </ul>
       </div>
     </div>
 
     <!-- FORM CONTATTI -->
-    <div class="bg-[#2a2a2a] rounded-xl p-8 md:p-12 shadow-lg max-w-3xl mx-auto">
+    <div class="bg-gray-800 rounded-xl p-8 md:p-12 shadow-lg max-w-3xl mx-auto">
       <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <input type="text" placeholder="Nome" class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b58e5c]" />
-        <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b58e5c]" />
-        <textarea placeholder="Messaggio" rows="5" class="md:col-span-2 w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#b58e5c]"></textarea>
-        <button type="submit" class="md:col-span-2 bg-[#b58e5c] text-white px-6 py-3 rounded-md font-semibold hover:bg-[#a27d4a] transition-all shadow hover:shadow-lg">
+        <input
+          type="text"
+          placeholder="Nome"
+          class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-700"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-700"
+        />
+        <textarea
+          rows="5"
+          placeholder="Messaggio"
+          class="md:col-span-2 w-full px-4 py-3 rounded-md border border-gray-600 bg-transparent text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-700"
+        ></textarea>
+        <button
+          type="submit"
+          class="md:col-span-2 bg-yellow-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-yellow-600 transition-shadow shadow hover:shadow-lg"
+        >
           Invia messaggio
         </button>
       </form>

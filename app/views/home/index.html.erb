@@ -4,9 +4,7 @@
     Benvenuto <%= current_user.email %>!
   <% end %>
 </div>
-  <%# --------------------------------- %>
-  <%# HERO SECTION - Presentazione tour %>
-  <%# --------------------------------- %>
+
   <%= render partial: 'components/Quinsbora/hero', locals: {
     heroimage: '/images/quellenhof/hero3.jpg',
     herotext: 'Itinerario Sud Europa',
@@ -17,9 +15,6 @@
     heronavbar3: 'Info & Supporto',
   } %>
 
-  <%# ---------------------------------------- %>
-  <%# INTRODUZIONE - Presentazione generale tour %>
-  <%# ---------------------------------------- %>
 <%= render partial: 'components/Quinsbora/introduzione', locals: {
   introduzioneimage: '/images/quellenhof/bg-section3.jpg',
   introduzionetext: 'Un viaggio indimenticabile tra cultura, natura e tradizioni mediterranee.',
@@ -36,10 +31,6 @@
   ]
 } %>
 
-
-  <%# ------------------------------------------------------------ %>
-  <%# PACCHETTI - Descrizione dettagliata giorno per giorno %>
-  <%# ------------------------------------------------------------ %>
   <%= render partial: 'components/Quinsbora/pacchetti', locals: {
     pacchettiimage: '/images/quellenhof/bg-pacchetti2.jpg',
     pacchettititle: 'Itinerario dettagliato',
@@ -95,9 +86,6 @@
   } %>
   <hr>
 
-  <%# ---------------------------------------------- %>
-  <%# NEWS - Aggiornamenti e info utili per i viaggiatori %>
-  <%# ---------------------------------------------- %>
   <%= render partial: 'components/Quinsbora/news', locals: {
     cards: [
       {
@@ -113,9 +101,6 @@
     ]
   } %>
 
-  <%# ---------------------------------------------- %>
-  <%# FEATURE - Punti di forza del tour operator %>
-  <%# ---------------------------------------------- %>
   <%= render partial: 'components/Quinsbora/feature', locals: {
     cardsfeature: [
       {
@@ -136,9 +121,6 @@
     ]
   } %>
 
-  <%# ---------------------------------------------- %>
-  <%# NEWSLETTER - Invito a contattare l’agenzia %>
-  <%# ---------------------------------------------- %>
   <%= render partial: 'components/Quinsbora/newsletter', locals: {
     newslettertitle: 'Personalizza il tuo viaggio: contattaci subito!',
     newsletterbutton: 'Scrivici ora'

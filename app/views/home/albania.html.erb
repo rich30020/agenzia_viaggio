@@ -1,17 +1,15 @@
 <div class="w-full overflow-x-hidden">
 
-  <%# HERO dedicato a Saranda %>
   <%= render partial: 'components/Quinsbora/hero', locals: {
-    heroimage: '/images/quellenhof/sparanda.jpg',
+    heroimage: '/images/quellenhof/saranda.jpg',
     herotext: 'Itinerario Saranda',
     herotitle: '4 giorni nel sud dell’Albania',
     herologo: '/images/quellenhof/logo.svg',
     heronavbar1: 'Programma',
     heronavbar2: 'Spiagge e Natura',
-    heronavbar3: 'Info utili',
+    heronavbar3: 'Info utili'
   } %>
 
-  <%# INTRODUZIONE Saranda %>
   <%= render partial: 'components/Quinsbora/introduzione', locals: {
     introduzioneimage: '/images/quellenhof/surunda.jpg',
     introduzionetext: 'Un angolo nascosto d’Europa tra acque cristalline e storia millenaria.',
@@ -26,7 +24,6 @@
     ]
   } %>
 
-  <%# PROGRAMMA DETTAGLIATO %>
   <%= render partial: 'components/Quinsbora/pacchetti', locals: {
     pacchettiimage: '/images/quellenhof/sab.jpg',
     pacchettititle: 'Programma giorno per giorno',
@@ -72,14 +69,11 @@
     ]
   } %>
 
-  <%# APPROFONDIMENTO: Natura e Spiagge %>
   <%= render partial: 'components/Quinsbora/approfondimento', locals: {
     approfondimentotitle: 'Natura incontaminata e spiagge da sogno',
     approfondimentotext: "La costa di Saranda è un paradiso mediterraneo: tra le più celebri troviamo Pulëbardha, con i suoi ciottoli bianchi e le acque trasparenti, perfetta per un pomeriggio di relax.\nKsamil incanta con le sue Tre Isole collegate da una lingua di sabbia: un angolo tropicale nel cuore d’Europa.\nA pochi chilometri si trova Syri Kalter, l’Occhio Blu: una sorgente misteriosa dove l’acqua sgorga limpida da una profondità ancora sconosciuta, creando sfumature blu intenso spettacolari.\n\nTra un tuffo e un’escursione, ti attendono panorami mozzafiato e sapori autentici: l’Albania ti sorprenderà per bellezza e accoglienza.",
     approfondimentoimage: '/images/quellenhof/sand.jpg'
   } %>
-
-  <%# FEATURE / PUNTI DI FORZA %>
   <%= render partial: 'components/Quinsbora/feature', locals: {
     cardsfeature: [
       {
@@ -100,11 +94,9 @@
     ]
   } %>
 
-  <%# CONTATTO / NEWSLETTER %>
   <%= render partial: 'components/Quinsbora/newsletter', locals: {
     newslettertitle: 'Vuoi organizzare il tuo viaggio a Saranda? Contattaci!',
     newsletterbutton: 'Scrivici ora'
   } %>
-
 
 </div>

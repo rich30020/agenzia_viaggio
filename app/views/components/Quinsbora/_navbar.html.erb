@@ -1,17 +1,15 @@
-<div class="w-full bg-transparent absolute top-2 left-0 right-0 z-20 px-4 sm:px-10">
-  <div class="flex flex-col sm:flex-row justify-between items-center">
+<div class="absolute top-2 left-0 right-0 z-20 w-full bg-transparent px-4 sm:px-10">
+  <div class="flex flex-col items-center justify-between sm:flex-row">
     
-    <!-- Bottone hamburger più grande su mobile -->
-    <div class="w-full flex justify-end sm:hidden">
-      <button id="menu-toggle" class="text-white focus:outline-none">
+    <div class="flex w-full justify-end sm:hidden">
+      <button id="menu-toggle" class="focus:outline-none text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
 
-    <!-- Menu: testo più grande su mobile, testo normale su desktop -->
-    <nav id="mobile-menu" class="hidden sm:flex flex-col sm:flex-row items-center text-white text-lg sm:text-xl space-y-3 sm:space-y-0 sm:space-x-12 mt-3 sm:mt-4">
+    <nav id="mobile-menu" class="hidden mt-3 flex-col space-y-3 text-lg text-white sm:mt-4 sm:flex sm:flex-row sm:space-x-12 sm:space-y-0 sm:text-xl items-center">
       <%= link_to 'Home', '/home', class: 'hover:text-gray-300' %>
       <%= link_to 'Scarica Itinerario', '/files/Guida_di_Viaggio.pdf', class: 'hover:text-gray-300', download: true %>
       <%= link_to 'Recensioni', '/recensioni', class: 'hover:text-gray-300' %>
@@ -25,12 +23,12 @@
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("mobile-menu");
 
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
     });
   });
 </script>
