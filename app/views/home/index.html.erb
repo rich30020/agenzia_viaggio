@@ -1,0 +1,183 @@
+<div class="w-full overflow-x-hidden">
+
+  <%# --------------------------------- %>
+  <%# HERO SECTION - Presentazione tour %>
+  <%# --------------------------------- %>
+  <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/hero3.jpg',
+    herotext: 'Itinerario Sud Europa',
+    herotitle: 'Da Barcellona a Creta: 10 giorni indimenticabili',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Itinerario',
+    heronavbar2: 'Destinazioni',
+    heronavbar3: 'Info & Supporto',
+    heronavbar4: 'Prenota ora'
+  } %>
+
+  <%# ---------------------------------------- %>
+  <%# INTRODUZIONE - Presentazione generale tour %>
+  <%# ---------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/introduzione', locals: {
+    introduzioneimage: '/images/quellenhof/bg-section3.jpg',
+    introduzionetext: 'Un viaggio indimenticabile tra cultura, natura e tradizioni mediterranee.',
+    introduzionetitle: 'Barcellona, Parigi, Berlino, Saranda e Creta',
+    introduzionesubtitle: '10 giorni, 5 nazioni, 5 destinazioni',
+    introduzionesubtitle2: 'Un mix perfetto di arte, storia, mare e gastronomia.',
+    introduzionesubtitle3: 'Ideale per chi cerca avventura e relax in un unico viaggio.',
+    cards: [
+      { image: '/images/quellenhof/card1a.jpg', description: 'Barcellona' },
+      { image: '/images/quellenhof/card2a.jpg', description: 'Parigi' },
+      { image: '/images/quellenhof/card3.jpg', description: 'Berlino' },
+      { image: '/images/quellenhof/card4.jpg', description: 'Saranda' },
+      { image: '/images/quellenhof/card5.jpg', description: 'Creta' },
+
+    ]
+  } %>
+
+  <%# ------------------------------------------------------------ %>
+  <%# PACCHETTI - Descrizione dettagliata giorno per giorno %>
+  <%# ------------------------------------------------------------ %>
+  <%= render partial: 'components/Quinsbora/pacchetti', locals: {
+    pacchettiimage: '/images/quellenhof/bg-pacchetti2.jpg',
+    pacchettititle: 'Itinerario dettagliato',
+    pacchettisubtitle: 'Scopri cosa fare ogni giorno in ciascuna destinazione.',
+    pacchettiofferte: 'Visualizza dettagli completi',
+    pacchetti: [
+      {
+        image: '/images/quellenhof/card10.jpg',
+        title: 'Barcellona – Giorni 1–3',
+        description: 'Arrivo e primo approccio alla vibrante capitale catalana. Visita di Sagrada Familia, Parco Güell, La Rambla e degustazione tapas.',
+        subtitle: '3 giorni | 15–17 marzo',
+        details: 'Giorno 1: Arrivo e relax\nGiorno 2: Tour Gaudí e centro storico\nGiorno 3: Mercati e spiaggia',
+        periods: 'Orari: 9:00 - 18:00',
+        servizi: ['Tour guidato Sagrada Familia', 'Ingresso Parco Güell', 'Degustazione tapas serale']
+      },
+      {
+        image: '/images/quellenhof/card11.jpg',
+        title: 'Parigi & Cabaret – Giorni 4–6',
+        description: 'Esplora la città dell’amore con visite a Torre Eiffel, Louvre, Montmartre e serate al Moulin Rouge.',
+        subtitle: '3 giorni | 18–20 marzo',
+        details: 'Giorno 4: Tour Torre Eiffel e Champs-Élysées\nGiorno 5: Louvre e quartiere Latino\nGiorno 6: Montmartre e cabaret serale',
+        periods: 'Orari: 10:00 - 20:00',\
+        servizi: ['Biglietti Louvre', 'Spettacolo Moulin Rouge', 'Visita Montmartre']
+      },
+      {
+        image: '/images/quellenhof/card12.jpg',
+        title: 'Berlino – Giorni 6–8',
+        description: 'Una full immersion nella storia contemporanea e nella scena underground della capitale tedesca.',
+        subtitle: '2 giorni | 20–22 marzo',
+        details: 'Giorno 6: Porta di Brandeburgo e Reichstag\nGiorno 7: East Side Gallery e musei',
+        periods: 'Orari: 9:00 - 19:00',
+        servizi: ['Welcome Card', 'Tour street art', 'Ingressi musei']
+      },
+      {
+        image: '/images/quellenhof/card13.jpg',
+        title: 'Saranda – Giorni 8–10',
+        description: 'Relax in riva al mare, snorkeling nelle acque cristalline e visita del castello di Lekursi.',
+        subtitle: '2 giorni | 22–24 marzo',
+        details: 'Giorno 8: Escursione in barca\nGiorno 9: Relax spiaggia e cena tipica',
+        periods: 'Orari: 10:00 - 18:00',
+        servizi: ['Escursione barca', 'Cena sul mare', 'Guida locale']
+      },
+      {
+        image: '/images/quellenhof/card14.jpg',
+        title: 'Creta – Giorni 10–12',
+        description: 'Tra mito e natura: visita a Cnosso, relax a Malia e assaggio della cucina cretese.',
+        subtitle: '2 giorni | 24–26 marzo',
+        details: 'Giorno 10: Palazzo di Cnosso e Heraklion\nGiorno 11: Spiagge di Malia e degustazioni',
+        periods: 'Orari: 9:00 - 17:00',
+        servizi: ['Biglietto Palazzo Cnosso', 'Tour gastronomico', 'Relax spiaggia']
+      }
+    ]
+  } %>
+
+  <%# ------------------------------------------------- %>
+  <%# TEXTCARD - Focus esperienze culinarie locali %>
+  <%# ------------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/textcard', locals: {
+    textcard: [
+      {
+        image: '/images/quellenhof/piatto1.png',
+        title: 'Sapori mediterranei',
+        description: 'Dalle tapas spagnole ai piatti francesi, fino ai sapori greci e balcanici: un viaggio per il palato.',
+        scopri: 'Scopri i piatti tipici'
+      },
+      {
+        image: '/images/quellenhof/piatto2.png',
+        title: 'Esperienze enogastronomiche',
+        description: 'Degustazioni di vini, oli e prodotti tipici accompagnati da guide esperte.',
+        scopri: 'Esplora sapori autentici'
+      }
+    ]
+  } %>
+
+  <%# ---------------------------------------------- %>
+  <%# CARDTESTO - Suggerimenti per gli alloggi %>
+  <%# ---------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/cardtesto', locals: {
+    testotitle: 'Alloggi selezionati',
+    testosubtitle: 'Strutture confortevoli e centrali per un soggiorno senza pensieri.',
+    panoramica: 'Visualizza tutte le opzioni di alloggio'
+  } %>
+
+  <%# ---------------------------------------------- %>
+  <%# NEWS - Aggiornamenti e info utili per i viaggiatori %>
+  <%# ---------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/news', locals: {
+    cards: [
+      {
+        image: '/images/quellenhof/news1.webp',
+        title: 'Allerta trasporti',
+        description: 'Possibili scioperi nelle principali città dal 15 marzo 2025.'
+      },
+      {
+        image: '/images/quellenhof/news2.webp',
+        title: 'Documenti per la Grecia',
+        description: 'Novità e consigli per l’ingresso in territorio greco.'
+      }
+    ]
+  } %>
+
+  <%# ---------------------------------------------- %>
+  <%# FEATURE - Punti di forza del tour operator %>
+  <%# ---------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/feature', locals: {
+    cardsfeature: [
+      {
+        image: '/images/quellenhof/feature1.png',
+        title: 'Supporto 24/7',
+        text: 'Assistenza continua durante tutto il viaggio.'
+      },
+      {
+        image: '/images/quellenhof/feature2.webp',
+        title: 'Trasporti inclusi',
+        text: 'Voli, bus e trasferimenti già prenotati.'
+      },
+      {
+        image: '/images/quellenhof/feature3.png',
+        title: 'Guide locali',
+        text: 'Esperti sempre al tuo fianco per un’esperienza autentica.'
+      }
+    ]
+  } %>
+
+  <%# ---------------------------------------------- %>
+  <%# NEWSLETTER - Invito a contattare l’agenzia %>
+  <%# ---------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Personalizza il tuo viaggio: contattaci subito!',
+    newsletterbutton: 'Scrivici ora'
+  } %>
+
+  <%# ---------------------------------------------- %>
+  <%# FOOTER - Informazioni generali e contatti %>
+  <%# ---------------------------------------------- %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Tour Operator Europa', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it', 'www.travelinspires.it'],
+    servizi: ['Tour Espressi', 'Viaggi su Misura', 'Supporto 24h', 'Partnership Locali'],
+    informazioni: ['Privacy', 'Condizioni', 'Assicurazione', 'FAQ'],
+    recensioni: ['★★★★★', '98% di soddisfazione', 'oltre 1500 viaggiatori felici']
+  } %>
+
+</div>

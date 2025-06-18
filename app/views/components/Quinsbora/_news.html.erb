@@ -1,0 +1,52 @@
+<section class="bg-black text-white py-8 px-2 relative">
+    <!-- Immagine di sfondo -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/quellenhof/background-news.png');"></div>
+    
+    <div class="relative max-w-5xl mx-auto text-center">
+        <h2 class="text-xl md:text-2xl font-bold mb-6">
+            Novità, eventi e curiosità dai Quellenhof Resorts
+        </h2>
+        <p class="text-gray-300 max-w-xl mx-auto mb-8 text-sm">
+            Vi teniamo sempre aggiornati su eventi speciali, curiosità su celebrità del mondo dello sport che amano soggiornare nei nostri hotel di lusso in Alto Adige e su novità esclusive. Date un’occhiata al blog del Quellenhof e lasciatevi ispirare!
+        </p>
+
+        <div class="grid grid-cols-3 gap-2">
+            <% cards.each_with_index do |card, index| %>
+            <% if index == 0 %>
+                <!-- Immagine verticale a sinistra -->
+                <div class="relative group overflow-hidden rounded-lg col-span-1 row-span-2">
+                <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                    <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                    <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                </div>
+                </div>
+            <% elsif index < 3 %>
+                <!-- Due immagini quadrate a destra -->
+                <div class="relative group overflow-hidden rounded-lg col-span-1 row-span-1">
+                <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                    <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                    <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                </div>
+                </div>
+            <% else %>
+                <!-- Immagine larga in basso -->
+                <div class="relative group overflow-hidden rounded-lg col-span-2 row-span-1">
+                <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
+                    <p class="text-sm text-gray-300"><%= card[:description] %></p>
+                    <h3 class="text-lg font-semibold"><%= card[:title] %></h3>
+                </div>
+                </div>
+            <% end %>
+            <% end %>
+        </div>
+
+        <div class="mt-10">
+            <a href="#" class="text-sm tracking-wide uppercase text-white border-b border-white hover:text-yellow-500 transition">
+                — Tutte le novità
+            </a>
+        </div>
+    </div>
+</section>

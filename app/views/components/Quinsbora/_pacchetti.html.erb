@@ -1,0 +1,58 @@
+<section
+  class="relative bg-cover text-white min-h-[90vh] flex items-center"
+  style="background-image: url(<%= pacchettiimage %>); background-position: 20% center;"
+>
+  <!-- Overlay oscurato intero -->
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+  <div class="relative z-10 w-full px-6 md:px-16">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-start justify-between">
+
+      <!-- Testo a sinistra -->
+      <div class="flex-1 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
+        <h2 class="text-5xl font-semibold mb-6 leading-tight">I nostri pacchetti speciali</h2>
+        <p class="mb-8 leading-relaxed max-w-xl font-medium text-gray-200">
+          Nei nostri pacchetti troverete la felicità. Sfogliate le nostre offerte e prenotate la vostra vacanza dei sogni.
+        </p>
+        <a href="#offerte" class="text-white underline font-semibold hover:text-yellow-400 transition">
+          Alla panoramica delle offerte
+        </a>
+      </div>
+
+      <!-- Cards a destra: griglia ottimizzata -->
+      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8 mt-10">
+
+        <% pacchetti.each do |pacchetto| %>
+          <div class="overflow-hidden rounded-lg bg-black/30 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+            <img
+              src="<%= pacchetto[:image] %>"
+              alt="<%= pacchetto[:title] %>"
+              class="w-full h-56 object-cover rounded-t-lg"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <p class="text-sm font-medium mb-2" style="color: #b59f7f;">
+                <%= pacchetto[:description] %>
+              </p>
+              <h3 class="text-xl font-semibold text-white mb-1"><%= pacchetto[:title] %></h3>
+              <p class="text-sm font-medium mb-3">
+                <strong><%= pacchetto[:subtitle] %></strong>
+              </p>
+              <ul class="list-disc list-inside text-sm text-gray-300 font-medium mb-3 flex-grow overflow-auto max-h-28">
+                <% pacchetto[:servizi].each do |servizio| %>
+                  <li><%= servizio %></li>
+                <% end %>
+              </ul>
+              <a href="#periodi" class="text-sm underline text-white font-medium mb-1 inline-block hover:text-yellow-400 transition">
+                <%= pacchetto[:periods] %>
+              </a>
+              <a href="#dettagli" class="text-sm underline text-white font-medium mt-auto whitespace-pre-line hover:text-yellow-400 transition">
+                <%= pacchetto[:details] %>
+              </a>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</section>
