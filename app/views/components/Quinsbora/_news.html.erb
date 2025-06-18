@@ -1,6 +1,6 @@
 <section class="relative bg-black text-white py-8 px-2">
   <div class="absolute inset-0 bg-center bg-cover opacity-20" style="background-image: url('/images/quellenhof/background-news.png');"></div>
-  
+
   <div class="relative mx-auto max-w-5xl text-center">
     <h2 class="mb-6 text-xl font-bold md:text-2xl">
       Novità, eventi e curiosità dai Quellenhof Resorts
@@ -9,33 +9,33 @@
       Vi teniamo sempre aggiornati su eventi speciali, curiosità su celebrità del mondo dello sport che amano soggiornare nei nostri hotel di lusso in Alto Adige e su novità esclusive. Date un’occhiata al blog del Quellenhof e lasciatevi ispirare!
     </p>
 
-    <div class="grid gap-2 grid-cols-3">
+    <div class="grid gap-2 grid-cols-1 sm:grid-cols-3">
       <% cards.each_with_index do |card, index| %>
-        <% case index
-          when 0 %>
-            <div class="relative overflow-hidden rounded-lg row-span-2 col-span-1 group">
-              <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
-                <p class="text-sm text-gray-300"><%= card[:description] %></p>
-                <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
-              </div>
+        <% case index %>
+        <% when 0 %>
+          <div class="relative overflow-hidden rounded-lg row-span-2 col-span-1 group">
+            <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
+              <p class="text-sm text-gray-300"><%= card[:description] %></p>
+              <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
             </div>
-          <% when 1, 2 %>
-            <div class="relative overflow-hidden rounded-lg row-span-1 col-span-1 group">
-              <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
-                <p class="text-sm text-gray-300"><%= card[:description] %></p>
-                <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
-              </div>
+          </div>
+        <% when 1, 2 %>
+          <div class="relative overflow-hidden rounded-lg row-span-1 col-span-1 group">
+            <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
+              <p class="text-sm text-gray-300"><%= card[:description] %></p>
+              <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
             </div>
-          <% else %>
-            <div class="relative overflow-hidden rounded-lg row-span-1 col-span-2 group">
-              <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
-                <p class="text-sm text-gray-300"><%= card[:description] %></p>
-                <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
-              </div>
+          </div>
+        <% else %>
+          <div class="relative overflow-hidden rounded-lg row-span-1 col-span-2 group">
+            <img src="<%= card[:image] %>" alt="<%= card[:title] %>" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-transparent to-transparent">
+              <p class="text-sm text-gray-300"><%= card[:description] %></p>
+              <h3 class="font-semibold text-lg"><%= card[:title] %></h3>
             </div>
+          </div>
         <% end %>
       <% end %>
     </div>
