@@ -11,9 +11,14 @@
 
             <nav class="flex flex-col sm:flex-row items-center text-white text-xs sm:text-xl space-y-2 sm:space-y-0 sm:space-x-12 mt-2 sm:mt-0">
                 <a href="/home" class="hover:text-gray-300">Home</a>
-                <a href="#about" class="hover:text-gray-300"><%= heronavbar1 %></a>
-                <a href="#services" class="hover:text-gray-300"><%= heronavbar2 %></a>
-                <a href="#contact" class="hover:text-gray-300"><%= heronavbar3 %></a>
+                <a href="#" class="hover:text-gray-300">Scarica Itinerario</a>
+                <a href="recensioni" class="hover:text-gray-300">Recensioni</a>
+                <a href="contatti" class="hover:text-gray-300">Contatti</a>
+                <% if user_signed_in? %>
+                <li class="nav-item">
+                    <%= link_to 'Logout', destroy_user_session_path, class: 'nav-link' %>
+                </li>
+                <% end %>
 
                 <div class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-0">
                     <button class="text-white hover:text-gray-300">

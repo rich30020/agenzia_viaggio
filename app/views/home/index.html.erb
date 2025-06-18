@@ -1,5 +1,9 @@
 <div class="w-full overflow-x-hidden">
-
+<div class="container mt-3">
+  <% if user_signed_in? %>
+    Benvenuto <%= current_user.email %>!
+  <% end %>
+</div>
   <%# --------------------------------- %>
   <%# HERO SECTION - Presentazione tour %>
   <%# --------------------------------- %>

@@ -1,0 +1,21 @@
+<%= render partial: 'components/Quinsbora/contatti', locals: {
+  contattititle: 'Contattaci',
+  contattisubtitle: 'Siamo sempre felici di aiutarti a pianificare il viaggio perfetto.',
+  indirizzo: ['Via del Viaggio 123', '39100 Bolzano (BZ)', 'Italia'],
+  contatti: ['Tel: +39 0471 123456', 'info@viaggimondo.it'],
+  orari: ['Lun-Ven: 09:00 - 18:00', 'Sabato: 10:00 - 13:00']
+} %>
+
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Personalizza il tuo viaggio: contattaci subito!',
+    newsletterbutton: 'Scrivici ora'
+  } %>
+
+    <%# FOOTER %>
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it'],
+    servizi: ['Tour alternativi', 'Ingresso club', 'Assistenza locale 24/7'],
+    informazioni: ['Privacy', 'Condizioni di viaggio', 'FAQ'],
+    recensioni: ['★★★★★', 'Oltre 500 esperienze guidate a Berlino']
+  } %>

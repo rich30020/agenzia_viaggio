@@ -1,0 +1,15 @@
+<div class="container mt-10 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md text-gray-800">
+  <p class="text-xl font-semibold mb-4">Hello <span class="text-blue-600"><%= @email %></span>!</p>
+
+  <% if @resource.try(:unconfirmed_email?) %>
+    <p class="mb-2">
+      We're contacting you to notify you that your email is being changed to
+      <span class="font-semibold text-blue-600"><%= @resource.unconfirmed_email %></span>.
+    </p>
+  <% else %>
+    <p class="mb-2">
+      We're contacting you to notify you that your email has been changed to
+      <span class="font-semibold text-blue-600"><%= @resource.email %></span>.
+    </p>
+  <% end %>
+</div>

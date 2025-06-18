@@ -1,25 +1,28 @@
 class HomeController < ApplicationController
-    def index 
-    end
 
-    def recensioni
-    end
+  before_action :authenticate_user!, except: [:index]
 
-    def contatti
-    end
+  def index
+  end
 
-    def spagna
-    end
+  def recensioni
+  end
 
-    def francia
-    end
+  def contatti
+  end
 
-    def germania
-    end
+  def spagna
+  end
 
-    def albania
-    end
+  def francia
+  end
 
-    def grecia
-    end
+  def germania
+  end
+
+  def albania
+  end
+
+  def grecia
+  end
 end

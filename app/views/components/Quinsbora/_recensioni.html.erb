@@ -1,0 +1,14 @@
+<section class="bg-white py-20 px-6 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#1c1c1c]"><%= recensionititle %></h2>
+  <p class="text-gray-600 mb-10"><%= recensionisubtitle %></p>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+    <% recensioni.each do |recensione| %>
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+        <div class="text-yellow-400 text-xl mb-2"><%= '★' * recensione[:stelle] %></div>
+        <p class="text-gray-700 italic mb-4">"<%= recensione[:testo] %>"</p>
+        <p class="text-gray-900 font-semibold">– <%= recensione[:nome] %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
