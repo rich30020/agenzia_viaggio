@@ -1,9 +1,63 @@
-<%= render partial: 'components/Quinsbora/recensioni', locals: {
-  recensionititle: 'Cosa dicono i nostri viaggiatori',
-  recensionisubtitle: 'Leggi le esperienze reali di chi ha già viaggiato con noi.',
-  recensioni: [
-    { stelle: 5, testo: 'Vacanza organizzata alla perfezione, ci torneremo sicuramente!', nome: 'Francesca R.' },
-    { stelle: 4, testo: 'Saranda ci ha sorpreso, paesaggi stupendi e assistenza top.', nome: 'Luca M.' },
-    { stelle: 5, testo: 'Il supporto prima e durante il viaggio è stato impeccabile.', nome: 'Giulia B.' }
-  ]
-} %>
+<div class="w-full overflow-x-hidden">
+  <div class="container mt-3">
+    <% if user_signed_in? %>
+      Benvenuto <%= current_user.email %>!
+    <% end %>
+  </div>
+
+    <%= render partial: 'components/Quinsbora/hero', locals: {
+    heroimage: '/images/quellenhof/review.jpg',
+    herotext: 'Itinerario Sud Europa',
+    herotitle: 'Scopri cosa dicono i nostri clienti dopo aver vissuto l’esperienza “Da Barcellona a Creta”.',
+    herologo: '/images/quellenhof/logo.svg',
+    heronavbar1: 'Itinerario',
+    heronavbar2: 'Destinazioni',
+    heronavbar3: 'Info & Supporto',
+  } %>
+
+  <section class="bg-white py-20 px-6 text-center">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <% [
+        { stelle: 5, testo: 'Organizzazione perfetta! Ogni tappa è stata emozionante e curata nei minimi dettagli.', nome: 'Francesca V. – Firenze' },
+        { stelle: 4, testo: 'Molto soddisfatta del viaggio. L’unica cosa che migliorerei è la durata delle tappe.', nome: 'Giorgia M. – Torino' },
+        { stelle: 5, testo: 'Il tour a Saranda è stato il mio preferito. Mare cristallino e atmosfera magica!', nome: 'Stefano D. – Palermo' },
+        { stelle: 4, testo: 'Servizio clienti sempre disponibile. Esperienza positiva sotto ogni punto di vista.', nome: 'Valentina S. – Venezia' },
+        { stelle: 5, testo: 'Barcellona e Parigi in un solo viaggio? Non ci ho pensato due volte. Bellissimo!', nome: 'Nicola C. – Brescia' },
+        { stelle: 5, testo: 'Creta è un sogno! Mi sono innamorata dei paesaggi e del cibo.', nome: 'Marta B. – Pisa' },
+        { stelle: 4, testo: 'Viaggio ben strutturato. Un po’ stancante ma ne è valsa la pena.', nome: 'Giovanni R. – Trento' },
+        { stelle: 5, testo: 'Viaggio vario, divertente e molto ben gestito. Consiglio vivamente!', nome: 'Angela P. – Genova' },
+        { stelle: 5, testo: 'Non ho mai viaggiato con tanta serenità. Ogni cosa era sotto controllo.', nome: 'Matteo T. – Lecce' },
+        { stelle: 5, testo: 'Le tappe culturali a Berlino e Parigi mi hanno colpito profondamente.', nome: 'Lorenzo G. – Padova' },
+        { stelle: 4, testo: 'Alcune giornate erano intense, ma l’esperienza nel complesso è stata super positiva.', nome: 'Sofia E. – Bari' },
+        { stelle: 5, testo: 'Mi sono sentita coccolata per tutto il viaggio. Un team davvero professionale.', nome: 'Chiara N. – Udine' },
+        { stelle: 5, testo: 'Esperienza top! Adatta a giovani e famiglie. Ritornerò con amici.', nome: 'Riccardo Z. – Perugia' },
+        { stelle: 5, testo: 'Ho scelto questo tour per festeggiare l’anniversario e siamo rimasti incantati!', nome: 'Alice & Fabio – Como' },
+        { stelle: 4, testo: 'Mete molto belle, hotel comodi e ottima compagnia. Lo rifarei.', nome: 'Daniela T. – Aosta' },
+        { stelle: 5, testo: 'Una delle migliori vacanze della mia vita. Non cambierei nulla.', nome: 'Gabriele S. – Catania' },
+        { stelle: 4, testo: 'Mi aspettavo meno, invece è stato tutto sopra le righe!', nome: 'Martina L. – Mantova' },
+        { stelle: 5, testo: 'Tutto perfetto: trasporti puntuali, guide preparate e itinerario suggestivo.', nome: 'Andrea M. – Parma' },
+        { stelle: 5, testo: 'Un tour vario e mai noioso. Ogni giorno una nuova scoperta.', nome: 'Elisa D. – Siena' },
+        { stelle: 5, testo: 'Se potessi tornare indietro, lo rifarei subito. Emozioni fortissime.', nome: 'Luigi F. – Reggio Emilia' }
+      ].each do |recensione| %>
+        <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+          <div class="text-yellow-400 text-xl mb-2"><%= '★' * recensione[:stelle] %></div>
+          <p class="text-gray-700 italic mb-4">"<%= recensione[:testo] %>"</p>
+          <p class="text-gray-900 font-semibold">– <%= recensione[:nome] %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <%= render partial: 'components/Quinsbora/newsletter', locals: {
+    newslettertitle: 'Hai già fatto un viaggio con noi? Lascia la tua recensione!',
+    newsletterbutton: 'Scrivici ora'
+  } %>
+
+  <%= render partial: 'components/Quinsbora/footer', locals: {
+    indirizzo: ['Travel Inspires', 'Tour Operator Europa', 'Via del Tour 10', '39015 Bolzano, Italia'],
+    contatti: ['Tel: +39 0473 600000', 'info@travelinspires.it', 'www.travelinspires.it'],
+    servizi: ['Tour Espressi', 'Viaggi su Misura', 'Supporto 24h', 'Partnership Locali'],
+    informazioni: ['Privacy', 'Condizioni', 'Assicurazione', 'FAQ'],
+    recensioni: ['★★★★★', '98% di soddisfazione', 'oltre 1500 viaggiatori felici']
+  } %>
+</div>
